@@ -1,0 +1,155 @@
+#WaehrungsauswahlContainer {
+  display: table;
+
+  width: 50%;
+  height: 25%;
+  background: #DD0000;
+  vertical-align: middle;
+}
+
+#Waehrungsbezeichnung {
+}
+
+
+#ComboboxAuswahl {
+    --hoehe: 33px;
+}
+
+p {
+    margin: 0 0 0 4%;
+    padding: 0;
+    display: inline;
+    line-height: var(--hoehe);
+    font-size: calc(var(--comboboxMaxFlagImgSize) / 2);
+
+}
+
+
+
+
+#ComboboxAuswahlWrapper {
+  position: absolute;
+  display: inline;
+  height: var(--hoehe);
+  cursor: pointer;
+  user-select: none;
+  z-index: 3;
+  
+  /* Position, Breite und Hoehe werden dynamisch gesetzt */
+}
+
+#Combobox {
+  border: 1px solid #A0A0A0;
+  border: 1px solid black;
+ 
+  border-radius: 4px;
+  width: 290px;
+
+  background: #353535;
+  color: #E0E0E0;
+}
+
+
+.ComboboxItem, #ComboboxAuswahl {
+    position: relative;
+
+    background: #101010;
+    color: #E0E0E0;
+    height: var(--hoehe);
+    height: 50px;
+    align-items: center;
+    padding-left: 5px;
+    vertical-align: middle;
+    line-height: var(--hoehe);
+
+    border-bottom: 0.1px solid #070707;
+    border-bottom: 0.1px solid #FFFFFF10;
+
+  display:flex;
+  align-items: center;
+  flex-direction: flex;
+}
+
+#FlaggeAuswahlContainer {
+  display: table;
+  width: 100%;
+  height: 50px;
+  
+}
+
+#FlaggeAuswahl {
+  position: relative;
+  margin-top: 3px;
+  left: 50%;
+  height: auto;
+  max-width: 50px;
+  max-height: 50px;
+  width: auto;
+  display: table-cell;
+  margin-bottom: 5px;
+  border: 1px solid #70707070;
+  border-radius: 5px;
+}
+
+.ComboboxItem img{
+  display: block;
+  max-width: var(--comboboxMaxFlagImgSize);
+  max-height: var(--comboboxMaxFlagImgSize);
+  width: auto;
+  height: auto;
+}
+
+.cmbTextWaehrungRechts {
+  position: absolute;
+  right: 4%;
+  color: gold;
+
+}
+
+.cmbTextWaehrungRechts:hover {
+}
+
+#ComboboxAuswahl {
+    position: relative;
+}
+        
+#ComboboxAuswahl {
+    background: #0A0A0A;
+
+}
+
+#ComboboxDropdown { 
+  max-height: 240px;
+  overflow: auto;
+  scroll-behavior: smooth;
+  width: auto;
+
+  scrollbar-color: #ADADAD #030303;
+  scrollbar-color: #ADADAD #0A0A0A;
+  overflow-x: hidden;
+
+  border-left: 1px solid #FFB00040;
+  border-right: 1px solid #FFB00040;
+  border-bottom: 1px solid #FFB00040;
+  border-radius: 0px 0px 5px 5px;
+}
+
+#ComboboxText {
+  color: #F0A000;
+  color: #FFFFFF;
+}
+
+.ComboboxItem:hover, .ComboboxItem:hover .cmbTextWaehrungRechts  {
+    background: gold;
+    color: #101010;
+
+}
+
+#btnPfeilUnten {
+  width: 40px;
+  height: 25px;
+}
+
+.O {
+   display: none;
+}

@@ -1,0 +1,2125 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+
+        <title></title>
+
+        <!-- CSS -->
+        <link rel='stylesheet' type="text/css" href="./css/index.css" />
+        <link rel='stylesheet' type="text/css" href="./css/theRealVinceCombobox.css" />
+
+        <!-- JS -->
+        <script src="./js/index.js"></script>
+        <script src="./js/currencyDict.js"></script>
+        <script src="./js/currencyCalc.js"></script>
+        <script src="./js/theRealVinceCombobox.js"></script>
+    </head>
+    <body>
+        <!-- Hintergrund, abgekapselt vom Rest, da er staendig in Bewegung ist. Funktioniert bereits, aber vorerst auskommentiert. -->
+        <!--
+        <div id="BG" class="NachObenLinks" ></div>
+        -->
+
+        <!-- Gesamtstruktur -->
+        <div id="Gesamt">
+          <div id="Mitte" onclick="HideCombobox(event);">
+            <img id="textboxImgIn" class="textboxImg" src="./img/svgs/02. Flag_of_the_United_States.svg" />
+            <img id="textboxImgOut" class="textboxImg" src="./img/svgs/01. Flag_of_Europe.svg" />
+
+            <div id="ComboboxAuswahlWrapper"  >
+                  <!-- 
+                  <div id="ComboboxAuswahl" class="ComboboxItem"><div id="ComboboxImg" class="imgLand imgBRD"></div><p id="ComboboxText">Ganz Deutschland</p><div id="PfeilUnten" ></div></div></div> -->
+                  <div id="ComboboxDropdown" class="O">
+                </div>
+              </div>
+
+
+            <div id="svgContainer">
+              <svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:TheRealVince="http://www.TheRealVince.org/namespaces/TheRealVince"
+   width="493.13263mm"
+   height="308.87082mm"
+   viewBox="0 0 493.13263 308.87083"
+   version="1.1"
+   id="TheRealVinceCurrencyCalcLiteControls">
+  <defs
+     id="defs2">
+    <linearGradient
+       id="linearGradient1158"
+       TheRealVince:collect="always">
+      <stop
+         id="stop1152"
+         offset="0"
+         style="stop-color:#815c24;stop-opacity:1" />
+      <stop
+         style="stop-color:#f5db8d;stop-opacity:1"
+         offset="0.67334175"
+         id="stop1154" />
+      <stop
+         id="stop1156"
+         offset="1"
+         style="stop-color:#a9763e;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient
+       TheRealVince:collect="always"
+       id="linearGradient1019">
+      <stop
+         style="stop-color:#363234;stop-opacity:1"
+         offset="0"
+         id="stop1076" />
+      <stop
+         style="stop-color:#151314;stop-opacity:1"
+         offset="1"
+         id="stop1078" />
+    </linearGradient>
+    <linearGradient
+       id="linearGradient1187"
+       TheRealVince:collect="always">
+      <stop
+         id="stop1181"
+         offset="0"
+         style="stop-color:#815c24;stop-opacity:1" />
+      <stop
+         style="stop-color:#e6c77d;stop-opacity:1"
+         offset="0.10345617"
+         id="stop1189" />
+      <stop
+         style="stop-color:#f5db8d;stop-opacity:1"
+         offset="0.34120229"
+         id="stop1183" />
+      <stop
+         id="stop1191"
+         offset="0.8753283"
+         style="stop-color:#f0d689;stop-opacity:1" />
+      <stop
+         id="stop1185"
+         offset="1"
+         style="stop-color:#a9763e;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient
+       TheRealVince:collect="always"
+       id="linearGradient2029">
+      <stop
+         style="stop-color:#815c24;stop-opacity:1"
+         offset="0"
+         id="stop2023" />
+      <stop
+         id="stop2025"
+         offset="0.49330041"
+         style="stop-color:#f5db8d;stop-opacity:1" />
+      <stop
+         style="stop-color:#a9763e;stop-opacity:1"
+         offset="1"
+         id="stop2027" />
+    </linearGradient>
+    <linearGradient
+       id="linearGradient2017"
+       TheRealVince:collect="always">
+      <stop
+         id="stop2011"
+         offset="0"
+         style="stop-color:#815c24;stop-opacity:1" />
+      <stop
+         style="stop-color:#f5db8d;stop-opacity:1"
+         offset="0.1133578"
+         id="stop2013" />
+      <stop
+         id="stop2019"
+         offset="0.54909706"
+         style="stop-color:#ac7a41;stop-opacity:1" />
+      <stop
+         style="stop-color:#d8bb73;stop-opacity:1"
+         offset="0.76904023"
+         id="stop2021" />
+      <stop
+         id="stop2015"
+         offset="1"
+         style="stop-color:#a9763e;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient
+       TheRealVince:collect="always"
+       id="linearGradient2009">
+      <stop
+         style="stop-color:#815c24;stop-opacity:1"
+         offset="0"
+         id="stop2003" />
+      <stop
+         id="stop2005"
+         offset="0.1854763"
+         style="stop-color:#f5db8d;stop-opacity:1" />
+      <stop
+         style="stop-color:#a9763e;stop-opacity:1"
+         offset="1"
+         id="stop2007" />
+    </linearGradient>
+    <linearGradient
+       TheRealVince:collect="always"
+       id="Pfeil">
+      <stop
+         style="stop-color:#815c24;stop-opacity:1"
+         offset="0"
+         id="stop2759" />
+      <stop
+         id="stop2761"
+         offset="0.34120229"
+         style="stop-color:#f5db8d;stop-opacity:1" />
+      <stop
+         style="stop-color:#a9763e;stop-opacity:1"
+         offset="1"
+         id="stop2763" />
+    </linearGradient>
+    <linearGradient
+       id="HintergrundRadial"
+       TheRealVince:collect="always">
+      <stop
+         id="stop2607"
+         offset="0"
+         style="stop-color:#1f1c1e;stop-opacity:1" />
+      <stop
+         id="stop2609"
+         offset="1"
+         style="stop-color:#141213;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient
+       id="GoldGrosz"
+       TheRealVince:collect="always">
+      <stop
+         id="stop2573"
+         offset="0"
+         style="stop-color:#815c24;stop-opacity:1" />
+      <stop
+         style="stop-color:#f5db8d;stop-opacity:1"
+         offset="0.51480943"
+         id="stop2585" />
+      <stop
+         id="stop2575"
+         offset="1"
+         style="stop-color:#a9763e;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient
+       gradientTransform="matrix(3.7795276,0,0,3.7795276,-10.306643,-307.23944)"
+       gradientUnits="userSpaceOnUse"
+       y2="131.93484"
+       x2="373.61844"
+       y1="131.93484"
+       x1="373.61844"
+       id="linearGradient10307"
+       xlink:href="#GoldGrosz"
+       TheRealVince:collect="always" />
+    <linearGradient
+       gradientTransform="matrix(3.7795276,0,0,3.7795276,-10.306643,-307.23944)"
+       gradientUnits="userSpaceOnUse"
+       y2="131.93484"
+       x2="373.61844"
+       y1="100.38007"
+       x1="373.16254"
+       id="linearGradient331"
+       xlink:href="#HintergrundRadial"
+       TheRealVince:collect="always" />
+    <radialGradient
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(1.1638988,0,0,1.0098506,-6.9525831,-1.169097)"
+       r="19.787848"
+       fy="118.68313"
+       fx="22.514812"
+       cy="118.68313"
+       cx="22.514812"
+       id="radialGradient2613"
+       xlink:href="#HintergrundRadial"
+       TheRealVince:collect="always" />
+    <linearGradient
+       gradientUnits="userSpaceOnUse"
+       y2="118.68313"
+       x2="42.302658"
+       y1="118.68313"
+       x1="2.7269659"
+       id="linearGradient2648"
+       xlink:href="#GoldGrosz"
+       TheRealVince:collect="always"
+       gradientTransform="matrix(1.1638988,0,0,0.99793674,-6.9525831,0.24487425)" />
+    <radialGradient
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(1,0,0,0.11972468,0,104.45735)"
+       r="166.05946"
+       fy="118.66441"
+       fx="188.33981"
+       cy="118.66441"
+       cx="188.33981"
+       id="radialGradient2669"
+       xlink:href="#GoldGrosz"
+       TheRealVince:collect="always" />
+    <radialGradient
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(1,0,0,1.9283489,0,-110.3757)"
+       r="8.7087708"
+       fy="118.89463"
+       fx="22.380602"
+       cy="118.89463"
+       cx="22.380602"
+       id="radialGradient2795"
+       xlink:href="#Pfeil"
+       TheRealVince:collect="always" />
+    <linearGradient
+       gradientTransform="matrix(-2.6725296,-2.6725296,2.6725296,-2.6725296,-10.814048,-377.39199)"
+       y2="170.89603"
+       x2="-334.70874"
+       y1="185.92824"
+       x1="-356.92319"
+       gradientUnits="userSpaceOnUse"
+       id="linearGradient3865"
+       xlink:href="#Pfeil"
+       TheRealVince:collect="always" />
+    <linearGradient
+       gradientUnits="userSpaceOnUse"
+       y2="55.079136"
+       x2="62.129559"
+       y1="36.691181"
+       x1="15.515493"
+       id="linearGradient2579-0-4"
+       xlink:href="#GoldGrosz"
+       TheRealVince:collect="always"
+       gradientTransform="translate(-20.021695,75.265022)" />
+    <radialGradient
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(1,0,0,1.9283489,77.108268,-109.08394)"
+       r="8.7087708"
+       fy="118.89463"
+       fx="22.380602"
+       cy="118.89463"
+       cx="22.380602"
+       id="radialGradient3967"
+       xlink:href="#Pfeil"
+       TheRealVince:collect="always" />
+    <radialGradient
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(4.606469,-0.10546183,0.02979919,1.301599,-86.550567,-33.902637)"
+       r="5.0259666"
+       fy="120.14643"
+       fx="22.125603"
+       cy="120.14643"
+       cx="22.125603"
+       id="radialGradient1135"
+       xlink:href="#linearGradient1158"
+       TheRealVince:collect="always" />
+    <radialGradient
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(1,0,0,0.64029776,0,30.205505)"
+       r="65.52993"
+       fy="83.973633"
+       fx="1403.2871"
+       cy="83.973633"
+       cx="1403.2871"
+       id="radialGradient1137"
+       xlink:href="#GoldGrosz"
+       TheRealVince:collect="always" />
+    <linearGradient
+       gradientTransform="translate(-12.81206,-7.1163038)"
+       gradientUnits="userSpaceOnUse"
+       y2="131.93484"
+       x2="373.61844"
+       y1="131.93484"
+       x1="373.61844"
+       id="linearGradient10307-8"
+       xlink:href="#GoldGrosz"
+       TheRealVince:collect="always" />
+    <linearGradient
+       gradientTransform="translate(-12.81206,-7.1163038)"
+       gradientUnits="userSpaceOnUse"
+       y2="131.93484"
+       x2="373.61844"
+       y1="100.38007"
+       x1="373.16254"
+       id="linearGradient331-9"
+       xlink:href="#HintergrundRadial"
+       TheRealVince:collect="always" />
+    <radialGradient
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(1.1634374,0,0,1.0098562,-20.393089,-7.9709393)"
+       r="19.787848"
+       fy="118.68313"
+       fx="22.514812"
+       cy="118.68313"
+       cx="22.514812"
+       id="radialGradient2613-7"
+       xlink:href="#HintergrundRadial"
+       TheRealVince:collect="always" />
+    <linearGradient
+       gradientUnits="userSpaceOnUse"
+       y2="118.68313"
+       x2="42.302658"
+       y1="118.68313"
+       x1="2.7269659"
+       id="linearGradient2648-7"
+       xlink:href="#GoldGrosz"
+       TheRealVince:collect="always"
+       gradientTransform="matrix(1.1634374,0,0,0.99794233,-20.393089,-6.5569615)" />
+    <radialGradient
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(1,0,0,0.11972468,-12.81206,97.341045)"
+       r="166.05946"
+       fy="118.66441"
+       fx="188.33981"
+       cy="118.66441"
+       cx="188.33981"
+       id="radialGradient2669-6"
+       xlink:href="#GoldGrosz"
+       TheRealVince:collect="always" />
+    <radialGradient
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(1,0,0,1.9283489,0,-110.3757)"
+       r="8.7087708"
+       fy="118.89463"
+       fx="22.380602"
+       cy="118.89463"
+       cx="22.380602"
+       id="radialGradient2795-4"
+       xlink:href="#Pfeil"
+       TheRealVince:collect="always" />
+    <linearGradient
+       gradientTransform="rotate(-135,-8.4732286,-1.5888441)"
+       y2="170.89603"
+       x2="-334.70874"
+       y1="185.92824"
+       x1="-356.92319"
+       gradientUnits="userSpaceOnUse"
+       id="linearGradient3865-3"
+       xlink:href="#Pfeil"
+       TheRealVince:collect="always" />
+    <radialGradient
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(1,0,0,1.9283489,77.108268,-109.08394)"
+       r="8.7087708"
+       fy="118.89463"
+       fx="22.380602"
+       cy="118.89463"
+       cx="22.380602"
+       id="radialGradient3967-0"
+       xlink:href="#Pfeil"
+       TheRealVince:collect="always" />
+    <radialGradient
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(4.6075241,-0.2897353,0.11948791,1.90016,-110.16175,-108.32759)"
+       r="5.0259666"
+       fy="120.14643"
+       fx="22.125603"
+       cy="120.14643"
+       cx="22.125603"
+       id="radialGradient1135-3"
+       xlink:href="#Pfeil"
+       TheRealVince:collect="always" />
+    <radialGradient
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(0.26458333,0,0,0.16941211,-10.480008,99.139698)"
+       r="65.52993"
+       fy="83.973633"
+       fx="1403.2871"
+       cy="83.973633"
+       cx="1403.2871"
+       id="radialGradient1137-0"
+       xlink:href="#GoldGrosz"
+       TheRealVince:collect="always" />
+    <linearGradient
+       TheRealVince:collect="always"
+       xlink:href="#GoldGrosz"
+       id="linearGradient935"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="translate(-32.833756,68.677884)"
+       x1="15.515494"
+       y1="32.032536"
+       x2="62.129559"
+       y2="55.098038" />
+    <linearGradient
+       TheRealVince:collect="always"
+       id="linearGradient2182">
+      <stop
+         style="stop-color:#815c24;stop-opacity:1"
+         offset="0"
+         id="stop2176" />
+      <stop
+         id="stop2178"
+         offset="0.32765663"
+         style="stop-color:#f5db8d;stop-opacity:1" />
+      <stop
+         style="stop-color:#a9763e;stop-opacity:1"
+         offset="1"
+         id="stop2180" />
+    </linearGradient>
+    <linearGradient
+       id="linearGradient2174"
+       TheRealVince:collect="always">
+      <stop
+         id="stop2168"
+         offset="0"
+         style="stop-color:#815c24;stop-opacity:1" />
+      <stop
+         style="stop-color:#f5db8d;stop-opacity:1"
+         offset="0.74855852"
+         id="stop2170" />
+      <stop
+         id="stop2172"
+         offset="1"
+         style="stop-color:#a9763e;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient
+       TheRealVince:collect="always"
+       id="linearGradient2166">
+      <stop
+         style="stop-color:#815c24;stop-opacity:1"
+         offset="0"
+         id="stop2160" />
+      <stop
+         id="stop2162"
+         offset="0.6719439"
+         style="stop-color:#f5db8d;stop-opacity:1" />
+      <stop
+         style="stop-color:#a9763e;stop-opacity:1"
+         offset="1"
+         id="stop2164" />
+    </linearGradient>
+    <linearGradient
+       id="linearGradient1019-8"
+       TheRealVince:collect="always">
+      <stop
+         id="stop1015"
+         offset="0"
+         style="stop-color:#363234;stop-opacity:1" />
+      <stop
+         id="stop1017"
+         offset="1"
+         style="stop-color:#151314;stop-opacity:1" />
+    </linearGradient>
+    <radialGradient
+       TheRealVince:collect="always"
+       xlink:href="#Pfeil"
+       id="radialGradient1151"
+       cx="22.125603"
+       cy="120.14643"
+       fx="22.125603"
+       fy="120.14643"
+       r="5.0259666"
+       gradientTransform="matrix(1,0,0,1.9039132,0,-108.60195)"
+       gradientUnits="userSpaceOnUse" />
+    <radialGradient
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(0.93281891,0,0,0.4830052,176.35901,107.87014)"
+       r="45.000004"
+       fy="119.77977"
+       fx="-116.65686"
+       cy="119.77977"
+       cx="-116.65686"
+       id="radialGradient1021"
+       xlink:href="#linearGradient1019-8"
+       TheRealVince:collect="always" />
+    <linearGradient
+       gradientUnits="userSpaceOnUse"
+       y2="120.01563"
+       x2="-110.12731"
+       y1="120.01563"
+       x1="-126.20644"
+       id="linearGradient1041"
+       xlink:href="#Pfeil"
+       TheRealVince:collect="always"
+       gradientTransform="matrix(0.93281891,0,0,0.93281891,176.35901,53.99158)" />
+    <radialGradient
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(0.93281891,0,0,1.5665902,176.35901,-22.070876)"
+       r="8.0395613"
+       fy="120.01563"
+       fx="-118.16687"
+       cy="120.01563"
+       cx="-118.16687"
+       id="radialGradient1049"
+       xlink:href="#GoldGrosz"
+       TheRealVince:collect="always" />
+    <radialGradient
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(1,0,0,1.6794151,0,-81.540431)"
+       r="8.0395613"
+       fy="120.01563"
+       fx="-118.16687"
+       cy="120.01563"
+       cx="-118.16687"
+       id="radialGradient1151-8"
+       xlink:href="#GoldGrosz"
+       TheRealVince:collect="always" />
+    <radialGradient
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(1,0,0,1.6794151,0,-81.540431)"
+       r="8.0395613"
+       fy="120.01563"
+       fx="-118.16687"
+       cy="120.01563"
+       cx="-118.16687"
+       id="radialGradient1254"
+       xlink:href="#GoldGrosz"
+       TheRealVince:collect="always" />
+    <radialGradient
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(1,0,0,1.6794151,0,-81.540431)"
+       r="8.0395613"
+       fy="120.01563"
+       fx="-118.16687"
+       cy="120.01563"
+       cx="-118.16687"
+       id="radialGradient1357"
+       xlink:href="#GoldGrosz"
+       TheRealVince:collect="always" />
+    <radialGradient
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(0.93281891,0,0,0.4830052,257.9957,107.87014)"
+       r="45.000004"
+       fy="119.77977"
+       fx="-116.65686"
+       cy="119.77977"
+       cx="-116.65686"
+       id="radialGradient1021-5"
+       xlink:href="#linearGradient1019-8"
+       TheRealVince:collect="always" />
+    <linearGradient
+       gradientTransform="matrix(0.93281891,0,0,0.93281891,257.9957,53.99158)"
+       gradientUnits="userSpaceOnUse"
+       y2="120.01563"
+       x2="-110.12731"
+       y1="120.01563"
+       x1="-126.20644"
+       id="linearGradient1041-0"
+       xlink:href="#Pfeil"
+       TheRealVince:collect="always" />
+    <radialGradient
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(0.93281891,0,0,1.5665902,257.9957,-22.070876)"
+       r="8.0395613"
+       fy="120.01563"
+       fx="-118.16687"
+       cy="120.01563"
+       cx="-118.16687"
+       id="radialGradient1049-6"
+       xlink:href="#GoldGrosz"
+       TheRealVince:collect="always" />
+    <radialGradient
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(1,0,0,1.6794151,0,-81.540431)"
+       r="8.0395613"
+       fy="120.01563"
+       fx="-118.16687"
+       cy="120.01563"
+       cx="-118.16687"
+       id="radialGradient1483"
+       xlink:href="#GoldGrosz"
+       TheRealVince:collect="always" />
+    <radialGradient
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(0.93281891,0,0,0.4830052,339.63239,107.87014)"
+       r="45.000004"
+       fy="119.77977"
+       fx="-116.65686"
+       cy="119.77977"
+       cx="-116.65686"
+       id="radialGradient1021-8"
+       xlink:href="#linearGradient1019-8"
+       TheRealVince:collect="always" />
+    <linearGradient
+       gradientTransform="matrix(0.93281891,0,0,0.93281891,339.63239,53.99158)"
+       gradientUnits="userSpaceOnUse"
+       y2="120.01563"
+       x2="-110.12731"
+       y1="120.01563"
+       x1="-126.20644"
+       id="linearGradient1041-2"
+       xlink:href="#Pfeil"
+       TheRealVince:collect="always" />
+    <radialGradient
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(0.93281891,0,0,1.5665902,339.63239,-22.070876)"
+       r="8.0395613"
+       fy="120.01563"
+       fx="-118.16687"
+       cy="120.01563"
+       cx="-118.16687"
+       id="radialGradient1049-2"
+       xlink:href="#GoldGrosz"
+       TheRealVince:collect="always" />
+    <radialGradient
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(1,0,0,1.6794151,0,-81.540431)"
+       r="8.0395613"
+       fy="120.01563"
+       fx="-118.16687"
+       cy="120.01563"
+       cx="-118.16687"
+       id="radialGradient1483-8"
+       xlink:href="#GoldGrosz"
+       TheRealVince:collect="always" />
+    <radialGradient
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(0.93281891,0,0,0.96601038,421.26908,70.59264)"
+       r="45.000004"
+       fy="119.77977"
+       fx="-116.65686"
+       cy="119.77977"
+       cx="-116.65686"
+       id="radialGradient1021-0"
+       xlink:href="#linearGradient1019-8"
+       TheRealVince:collect="always" />
+    <linearGradient
+       gradientTransform="matrix(0.93281891,0,0,0.93281891,402.72638,93.678279)"
+       gradientUnits="userSpaceOnUse"
+       y2="122.75088"
+       x2="-64.14196"
+       y1="120.01563"
+       x1="-127.13248"
+       id="linearGradient1041-03"
+       xlink:href="#linearGradient2017"
+       TheRealVince:collect="always" />
+    <radialGradient
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(7.328872,0.02483061,-0.00530768,1.5665812,1159.1646,20.551059)"
+       r="8.0395613"
+       fy="121.53531"
+       fx="-111.28947"
+       cy="121.53532"
+       cx="-111.28947"
+       id="radialGradient1049-69"
+       xlink:href="#linearGradient2009"
+       TheRealVince:collect="always" />
+    <radialGradient
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(1,0,0,1.6794151,0,-81.540431)"
+       r="8.0395613"
+       fy="120.01563"
+       fx="-118.16687"
+       cy="120.01563"
+       cx="-118.16687"
+       id="radialGradient1483-0"
+       xlink:href="#GoldGrosz"
+       TheRealVince:collect="always" />
+    <radialGradient
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(0.93281891,0,0,0.4830052,176.35901,149.02361)"
+       r="45.000004"
+       fy="119.77977"
+       fx="-116.65686"
+       cy="119.77977"
+       cx="-116.65686"
+       id="radialGradient1021-04"
+       xlink:href="#linearGradient1019-8"
+       TheRealVince:collect="always" />
+    <linearGradient
+       gradientTransform="matrix(0.93281891,0,0,0.93281891,176.35901,95.145041)"
+       gradientUnits="userSpaceOnUse"
+       y2="120.01563"
+       x2="-110.12731"
+       y1="120.01563"
+       x1="-126.20644"
+       id="linearGradient1041-6"
+       xlink:href="#Pfeil"
+       TheRealVince:collect="always" />
+    <radialGradient
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(0.93281891,0,0,1.5665902,176.35901,19.082585)"
+       r="8.0395613"
+       fy="120.01563"
+       fx="-118.16687"
+       cy="120.01563"
+       cx="-118.16687"
+       id="radialGradient1049-9"
+       xlink:href="#GoldGrosz"
+       TheRealVince:collect="always" />
+    <radialGradient
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(1,0,0,1.6794151,0,-81.540431)"
+       r="8.0395613"
+       fy="120.01563"
+       fx="-118.16687"
+       cy="120.01563"
+       cx="-118.16687"
+       id="radialGradient1483-82"
+       xlink:href="#GoldGrosz"
+       TheRealVince:collect="always" />
+    <radialGradient
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(0.93281891,0,0,0.4830052,257.9957,149.02361)"
+       r="45.000004"
+       fy="119.77977"
+       fx="-116.65686"
+       cy="119.77977"
+       cx="-116.65686"
+       id="radialGradient1021-6"
+       xlink:href="#linearGradient1019-8"
+       TheRealVince:collect="always" />
+    <linearGradient
+       gradientTransform="matrix(0.93281891,0,0,0.93281891,257.9957,95.145041)"
+       gradientUnits="userSpaceOnUse"
+       y2="120.01563"
+       x2="-110.12731"
+       y1="120.01563"
+       x1="-126.20644"
+       id="linearGradient1041-21"
+       xlink:href="#Pfeil"
+       TheRealVince:collect="always" />
+    <radialGradient
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(0.93281891,0,0,1.5665902,257.9957,19.082585)"
+       r="8.0395613"
+       fy="120.01563"
+       fx="-118.16687"
+       cy="120.01563"
+       cx="-118.16687"
+       id="radialGradient1049-1"
+       xlink:href="#GoldGrosz"
+       TheRealVince:collect="always" />
+    <radialGradient
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(1,0,0,1.6794151,0,-81.540431)"
+       r="8.0395613"
+       fy="120.01563"
+       fx="-118.16687"
+       cy="120.01563"
+       cx="-118.16687"
+       id="radialGradient1483-07"
+       xlink:href="#GoldGrosz"
+       TheRealVince:collect="always" />
+    <radialGradient
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(0.93281891,0,0,0.4830052,339.63239,149.02361)"
+       r="45.000004"
+       fy="119.77977"
+       fx="-116.65686"
+       cy="119.77977"
+       cx="-116.65686"
+       id="radialGradient1021-80"
+       xlink:href="#linearGradient1019-8"
+       TheRealVince:collect="always" />
+    <linearGradient
+       gradientTransform="matrix(0.93281891,0,0,0.93281891,339.63239,95.145041)"
+       gradientUnits="userSpaceOnUse"
+       y2="120.01563"
+       x2="-110.12731"
+       y1="120.01563"
+       x1="-126.20644"
+       id="linearGradient1041-9"
+       xlink:href="#Pfeil"
+       TheRealVince:collect="always" />
+    <radialGradient
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(0.93281891,0,0,1.5665902,339.63239,19.082585)"
+       r="8.0395613"
+       fy="120.01563"
+       fx="-118.16687"
+       cy="120.01563"
+       cx="-118.16687"
+       id="radialGradient1049-4"
+       xlink:href="#GoldGrosz"
+       TheRealVince:collect="always" />
+    <radialGradient
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(1,0,0,1.6794151,0,-81.540431)"
+       r="8.0395613"
+       fy="120.01563"
+       fx="-118.16687"
+       cy="120.01563"
+       cx="-118.16687"
+       id="radialGradient1483-05"
+       xlink:href="#GoldGrosz"
+       TheRealVince:collect="always" />
+    <radialGradient
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(0.93281891,0,0,0.4830052,176.35901,190.17707)"
+       r="45.000004"
+       fy="119.77977"
+       fx="-116.65686"
+       cy="119.77977"
+       cx="-116.65686"
+       id="radialGradient1021-3"
+       xlink:href="#linearGradient1019-8"
+       TheRealVince:collect="always" />
+    <linearGradient
+       gradientTransform="matrix(0.93281891,0,0,0.93281891,176.35901,136.29848)"
+       gradientUnits="userSpaceOnUse"
+       y2="120.01563"
+       x2="-110.12731"
+       y1="120.01563"
+       x1="-126.20644"
+       id="linearGradient1041-4"
+       xlink:href="#Pfeil"
+       TheRealVince:collect="always" />
+    <radialGradient
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(0.93281891,0,0,1.5665902,176.35901,60.236046)"
+       r="8.0395613"
+       fy="120.01563"
+       fx="-118.16687"
+       cy="120.01563"
+       cx="-118.16687"
+       id="radialGradient1049-96"
+       xlink:href="#GoldGrosz"
+       TheRealVince:collect="always" />
+    <radialGradient
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(1,0,0,1.6794151,0,-81.540431)"
+       r="8.0395613"
+       fy="120.01563"
+       fx="-118.16687"
+       cy="120.01563"
+       cx="-118.16687"
+       id="radialGradient1483-4"
+       xlink:href="#GoldGrosz"
+       TheRealVince:collect="always" />
+    <radialGradient
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(0.93281891,0,0,0.4830052,257.9957,190.17707)"
+       r="45.000004"
+       fy="119.77977"
+       fx="-116.65686"
+       cy="119.77977"
+       cx="-116.65686"
+       id="radialGradient1021-9"
+       xlink:href="#linearGradient1019-8"
+       TheRealVince:collect="always" />
+    <linearGradient
+       gradientTransform="matrix(0.93281891,0,0,0.93281891,257.9957,136.29848)"
+       gradientUnits="userSpaceOnUse"
+       y2="120.01563"
+       x2="-110.12731"
+       y1="120.01563"
+       x1="-126.20644"
+       id="linearGradient1041-5"
+       xlink:href="#Pfeil"
+       TheRealVince:collect="always" />
+    <radialGradient
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(0.93281891,0,0,1.5665902,257.9957,60.236046)"
+       r="8.0395613"
+       fy="120.01563"
+       fx="-118.16687"
+       cy="120.01563"
+       cx="-118.16687"
+       id="radialGradient1049-3"
+       xlink:href="#GoldGrosz"
+       TheRealVince:collect="always" />
+    <radialGradient
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(1,0,0,1.6794151,0,-81.540431)"
+       r="8.0395613"
+       fy="120.01563"
+       fx="-118.16687"
+       cy="120.01563"
+       cx="-118.16687"
+       id="radialGradient1483-9"
+       xlink:href="#GoldGrosz"
+       TheRealVince:collect="always" />
+    <radialGradient
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(0.93281891,0,0,0.4830052,339.63239,190.17707)"
+       r="45.000004"
+       fy="119.77977"
+       fx="-116.65686"
+       cy="119.77977"
+       cx="-116.65686"
+       id="radialGradient1021-2"
+       xlink:href="#linearGradient1019-8"
+       TheRealVince:collect="always" />
+    <linearGradient
+       gradientTransform="matrix(0.93281891,0,0,0.93281891,339.63239,136.29848)"
+       gradientUnits="userSpaceOnUse"
+       y2="120.01563"
+       x2="-110.12731"
+       y1="120.01563"
+       x1="-126.20644"
+       id="linearGradient1041-92"
+       xlink:href="#Pfeil"
+       TheRealVince:collect="always" />
+    <radialGradient
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(0.93281891,0,0,1.5665902,339.63239,60.236046)"
+       r="8.0395613"
+       fy="120.01563"
+       fx="-118.16687"
+       cy="120.01563"
+       cx="-118.16687"
+       id="radialGradient1049-68"
+       xlink:href="#GoldGrosz"
+       TheRealVince:collect="always" />
+    <radialGradient
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(1,0,0,1.6794151,0,-81.540431)"
+       r="8.0395613"
+       fy="120.01563"
+       fx="-118.16687"
+       cy="120.01563"
+       cx="-118.16687"
+       id="radialGradient1483-3"
+       xlink:href="#GoldGrosz"
+       TheRealVince:collect="always" />
+    <radialGradient
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(0.93281891,0,0,0.4830052,176.35901,231.33053)"
+       r="45.000004"
+       fy="119.77977"
+       fx="-116.65686"
+       cy="119.77977"
+       cx="-116.65686"
+       id="radialGradient1021-89"
+       xlink:href="#linearGradient1019-8"
+       TheRealVince:collect="always" />
+    <linearGradient
+       gradientTransform="matrix(0.93281891,0,0,0.93281891,176.35901,177.45195)"
+       gradientUnits="userSpaceOnUse"
+       y2="131.17317"
+       x2="-113.69849"
+       y1="120.21407"
+       x1="-129.84447"
+       id="linearGradient1041-8"
+       xlink:href="#Pfeil"
+       TheRealVince:collect="always" />
+    <radialGradient
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(0.51846043,1.2945933,-1.5509721,0.62113534,313.53645,367.83689)"
+       r="8.0395613"
+       fy="120.01563"
+       fx="-118.16687"
+       cy="120.01563"
+       cx="-118.16687"
+       id="radialGradient1049-33"
+       xlink:href="#linearGradient2029"
+       TheRealVince:collect="always" />
+    <radialGradient
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(1,0,0,1.6794151,0,-81.540431)"
+       r="8.0395613"
+       fy="120.01563"
+       fx="-118.16687"
+       cy="120.01563"
+       cx="-118.16687"
+       id="radialGradient1483-2"
+       xlink:href="#GoldGrosz"
+       TheRealVince:collect="always" />
+    <radialGradient
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(0.93281891,0,0,0.4830052,257.9957,231.33053)"
+       r="45.000004"
+       fy="119.77977"
+       fx="-116.65686"
+       cy="119.77977"
+       cx="-116.65686"
+       id="radialGradient1021-96"
+       xlink:href="#linearGradient1019-8"
+       TheRealVince:collect="always" />
+    <linearGradient
+       gradientTransform="matrix(0.93281891,0,0,0.93281891,248.12336,177.45195)"
+       gradientUnits="userSpaceOnUse"
+       y2="121.33855"
+       x2="-92.135643"
+       y1="120.01563"
+       x1="-126.20644"
+       id="linearGradient1041-1"
+       xlink:href="#Pfeil"
+       TheRealVince:collect="always" />
+    <radialGradient
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(4.3404331,0.09209745,-0.0332332,1.5662377,654.77897,112.31467)"
+       r="8.0395613"
+       fy="120.01563"
+       fx="-118.16687"
+       cy="120.01563"
+       cx="-118.16687"
+       id="radialGradient1049-7"
+       xlink:href="#linearGradient2174"
+       TheRealVince:collect="always" />
+    <radialGradient
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(1,0,0,1.6794151,0,-81.540431)"
+       r="8.0395613"
+       fy="120.01563"
+       fx="-118.16687"
+       cy="120.01563"
+       cx="-118.16687"
+       id="radialGradient1483-24"
+       xlink:href="#GoldGrosz"
+       TheRealVince:collect="always" />
+    <radialGradient
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(0.93281891,0,0,0.4830052,339.63239,231.33053)"
+       r="45.000004"
+       fy="119.77977"
+       fx="-116.65686"
+       cy="119.77977"
+       cx="-116.65686"
+       id="radialGradient1021-30"
+       xlink:href="#linearGradient1019-8"
+       TheRealVince:collect="always" />
+    <linearGradient
+       gradientTransform="matrix(0.93281891,0,0,0.93281891,317.91312,177.45195)"
+       gradientUnits="userSpaceOnUse"
+       y2="123.79539"
+       x2="-64.014214"
+       y1="120.01563"
+       x1="-126.20644"
+       id="linearGradient1041-89"
+       xlink:href="#Pfeil"
+       TheRealVince:collect="always" />
+    <radialGradient
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(6.6341045,-6.9958451e-7,1.6639058e-7,1.5665902,991.61607,101.38941)"
+       r="8.0395613"
+       fy="120.01563"
+       fx="-118.16687"
+       cy="120.01563"
+       cx="-118.16687"
+       id="radialGradient1049-92"
+       xlink:href="#GoldGrosz"
+       TheRealVince:collect="always" />
+    <radialGradient
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(1,0,0,1.6794151,0,-81.540431)"
+       r="8.0395613"
+       fy="120.01563"
+       fx="-118.16687"
+       cy="120.01563"
+       cx="-118.16687"
+       id="radialGradient1483-99"
+       xlink:href="#GoldGrosz"
+       TheRealVince:collect="always" />
+    <radialGradient
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(0.93281891,0,0,0.4830052,421.26908,190.17707)"
+       r="45.000004"
+       fy="119.77977"
+       fx="-116.65686"
+       cy="119.77977"
+       cx="-116.65686"
+       id="radialGradient1021-1"
+       xlink:href="#linearGradient1019-8"
+       TheRealVince:collect="always" />
+    <linearGradient
+       gradientTransform="matrix(0.93281891,0,0,0.93281891,414.11373,133.90092)"
+       gradientUnits="userSpaceOnUse"
+       y2="120.77158"
+       x2="-64.014214"
+       y1="120.01563"
+       x1="-126.20644"
+       id="linearGradient1041-7"
+       xlink:href="#Pfeil"
+       TheRealVince:collect="always" />
+    <radialGradient
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(6.2832558,0.08771189,-0.02186688,1.5664376,1048.9824,68.221435)"
+       r="8.0395613"
+       fy="120.01563"
+       fx="-118.16687"
+       cy="120.01563"
+       cx="-118.16687"
+       id="radialGradient1049-34"
+       xlink:href="#GoldGrosz"
+       TheRealVince:collect="always" />
+    <radialGradient
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(1,0,0,1.6794151,0,-81.540431)"
+       r="8.0395613"
+       fy="120.01563"
+       fx="-118.16687"
+       cy="120.01563"
+       cx="-118.16687"
+       id="radialGradient1483-01"
+       xlink:href="#GoldGrosz"
+       TheRealVince:collect="always" />
+    <radialGradient
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(0.93281891,0,0,0.4830052,421.26908,231.33053)"
+       r="45.000004"
+       fy="119.77977"
+       fx="-116.65686"
+       cy="119.77977"
+       cx="-116.65686"
+       id="radialGradient1021-1-3"
+       xlink:href="#linearGradient1019-8"
+       TheRealVince:collect="always" />
+    <linearGradient
+       gradientTransform="matrix(0.93281891,0,0,0.93281891,428.17976,167.57955)"
+       gradientUnits="userSpaceOnUse"
+       y2="127.99094"
+       x2="-118.82169"
+       y1="120.74324"
+       x1="-124.28822"
+       id="linearGradient1041-7-9"
+       xlink:href="#linearGradient2166"
+       TheRealVince:collect="always" />
+    <radialGradient
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(1,0,0,1.6794151,0,-81.540431)"
+       r="8.0395613"
+       fy="120.01563"
+       fx="-118.16687"
+       cy="120.01563"
+       cx="-118.16687"
+       id="radialGradient2049"
+       xlink:href="#GoldGrosz"
+       TheRealVince:collect="always" />
+    <linearGradient
+       gradientUnits="userSpaceOnUse"
+       y2="252.98885"
+       x2="147.73294"
+       y1="252.98885"
+       x1="143.36662"
+       id="linearGradient2158"
+       xlink:href="#GoldGrosz"
+       TheRealVince:collect="always"
+       gradientTransform="matrix(0.93281891,0,0,0.93281891,176.35901,53.99158)" />
+    <g
+       id="s">
+      <g
+         id="c">
+        <path
+           transform="rotate(18,3.1568758,-0.5)"
+           d="M 0,0 V 1 H 0.5 Z"
+           id="t"
+           TheRealVince:connector-curvature="0" />
+        <use
+           id="use999"
+           transform="scale(-1,1)"
+           xlink:href="#t"
+           x="0"
+           y="0"
+           width="100%"
+           height="100%" />
+      </g>
+      <g
+         id="a">
+        <use
+           id="use1002"
+           transform="rotate(72)"
+           xlink:href="#c"
+           x="0"
+           y="0"
+           width="100%"
+           height="100%" />
+        <use
+           id="use1004"
+           transform="rotate(144)"
+           xlink:href="#c"
+           x="0"
+           y="0"
+           width="100%"
+           height="100%" />
+      </g>
+      <use
+         id="use1007"
+         transform="scale(-1,1)"
+         xlink:href="#a"
+         x="0"
+         y="0"
+         width="100%"
+         height="100%" />
+    </g>
+    <linearGradient
+       gradientTransform="matrix(0.86099662,0,0,0.86099662,287.59007,-30.784038)"
+       gradientUnits="userSpaceOnUse"
+       y2="120.77158"
+       x2="-64.014214"
+       y1="120.01563"
+       x1="-126.20644"
+       id="linearGradient1041-7-8"
+       xlink:href="#Pfeil"
+       TheRealVince:collect="always" />
+    <radialGradient
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(5.7994775,0.08095852,-0.02018324,1.4458299,873.57718,-91.406556)"
+       r="8.0395613"
+       fy="120.01563"
+       fx="-118.16687"
+       cy="120.01563"
+       cx="-118.16687"
+       id="radialGradient1049-34-8"
+       xlink:href="#GoldGrosz"
+       TheRealVince:collect="always" />
+    <radialGradient
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(6.7357723,0.09402885,-0.02344172,1.6792515,931.49835,15.254681)"
+       r="8.0395613"
+       fy="120.01563"
+       fx="-118.16687"
+       cy="120.01563"
+       cx="-118.16687"
+       id="radialGradient1036"
+       xlink:href="#GoldGrosz"
+       TheRealVince:collect="always" />
+    <linearGradient
+       gradientTransform="matrix(1.5186201,0,0,1.5186201,64.74389,162.47213)"
+       gradientUnits="userSpaceOnUse"
+       y2="120.5448"
+       x2="-106.68773"
+       y1="120.01563"
+       x1="-127.13248"
+       id="linearGradient1041-03-3"
+       xlink:href="#linearGradient2182"
+       TheRealVince:collect="always" />
+    <radialGradient
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(2.1683329,0.09995663,-0.11744429,2.547688,155.61363,50.779533)"
+       r="8.0395613"
+       fy="120.01563"
+       fx="-118.16687"
+       cy="120.01563"
+       cx="-118.16687"
+       id="radialGradient1049-69-4"
+       xlink:href="#GoldGrosz"
+       TheRealVince:collect="always" />
+    <radialGradient
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(1.3319078,0.06139879,-0.07214066,1.5649283,485.62458,7.9492162)"
+       r="8.0395613"
+       fy="120.01563"
+       fx="-118.16687"
+       cy="120.01563"
+       cx="-118.16687"
+       id="radialGradient1952"
+       xlink:href="#GoldGrosz"
+       TheRealVince:collect="always" />
+    <linearGradient
+       gradientTransform="matrix(0.8609966,0,0,0.8609966,283.42151,-34.740278)"
+       gradientUnits="userSpaceOnUse"
+       y2="190.10072"
+       x2="-235.38016"
+       y1="120.29518"
+       x1="-237.46852"
+       id="linearGradient1041-7-8-8"
+       xlink:href="#linearGradient1187"
+       TheRealVince:collect="always" />
+    <radialGradient
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(9.841214,-6.9247013,0.83209861,1.1825579,1180.8216,-999.64634)"
+       r="8.0395613"
+       fy="200.52011"
+       fx="-136.77515"
+       cy="200.52011"
+       cx="-136.77515"
+       id="radialGradient1049-34-8-8"
+       xlink:href="#GoldGrosz"
+       TheRealVince:collect="always" />
+    <radialGradient
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(5.7994775,0.08095852,-0.02018324,1.4458299,887.33557,-89.819055)"
+       r="8.0395613"
+       fy="120.01563"
+       fx="-118.16687"
+       cy="120.01563"
+       cx="-118.16687"
+       id="radialGradient1059"
+       xlink:href="#GoldGrosz"
+       TheRealVince:collect="always" />
+    <linearGradient
+       gradientTransform="matrix(0.86099657,0,0,0.86099657,411.81678,-34.229706)"
+       gradientUnits="userSpaceOnUse"
+       y2="120.77158"
+       x2="-64.014214"
+       y1="120.01563"
+       x1="-126.20644"
+       id="linearGradient1041-7-8-8-4"
+       xlink:href="#Pfeil"
+       TheRealVince:collect="always" />
+    <radialGradient
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(5.7994774,0.08095852,-0.02018324,1.4458299,997.80385,-94.852221)"
+       r="8.0395613"
+       fy="120.01563"
+       fx="-118.16687"
+       cy="120.01563"
+       cx="-118.16687"
+       id="radialGradient1049-34-8-8-0"
+       xlink:href="#GoldGrosz"
+       TheRealVince:collect="always" />
+    <radialGradient
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(5.7994774,0.08095852,-0.02018324,1.4458299,801.51497,-90.791412)"
+       r="8.0395613"
+       fy="120.01563"
+       fx="-118.16687"
+       cy="120.01563"
+       cx="-118.16687"
+       id="radialGradient1130"
+       xlink:href="#GoldGrosz"
+       TheRealVince:collect="always" />
+    <linearGradient
+       gradientTransform="matrix(0.86099657,0,0,0.86099657,313.53353,-34.765275)"
+       gradientUnits="userSpaceOnUse"
+       y2="143.13583"
+       x2="84.428604"
+       y1="120.29518"
+       x1="-237.46852"
+       id="linearGradient1041-7-8-8-2"
+       xlink:href="#linearGradient1187"
+       TheRealVince:collect="always" />
+    <radialGradient
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(9.6615758,0.02108087,-0.003155,1.4459673,1353.8489,-102.47984)"
+       r="8.0395613"
+       fy="133.5192"
+       fx="-108.14763"
+       cy="133.5192"
+       cx="-108.14763"
+       id="radialGradient1049-34-8-8-4"
+       xlink:href="#GoldGrosz"
+       TheRealVince:collect="always" />
+    <radialGradient
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(9.661576,0.02108087,-0.003155,1.4459673,1245.7928,-102.40707)"
+       r="8.0395613"
+       fy="120.01563"
+       fx="-118.16687"
+       cy="120.01563"
+       cx="-118.16687"
+       id="radialGradient1235"
+       xlink:href="#GoldGrosz"
+       TheRealVince:collect="always" />
+    <radialGradient
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(0.46020781,0,0,0.41100812,24.469749,24.120822)"
+       r="45.000004"
+       fy="119.77977"
+       fx="-116.65686"
+       cy="119.77977"
+       cx="-116.65686"
+       id="radialGradient1021-04-9"
+       xlink:href="#linearGradient1019"
+       TheRealVince:collect="always" />
+    <linearGradient
+       gradientTransform="translate(-405.19404,-43.360475)"
+       gradientUnits="userSpaceOnUse"
+       y2="131.93484"
+       x2="373.61844"
+       y1="100.38007"
+       x1="373.16254"
+       id="linearGradient331-9-9"
+       xlink:href="#HintergrundRadial"
+       TheRealVince:collect="always" />
+    <linearGradient
+       gradientTransform="translate(-405.19404,-43.360475)"
+       gradientUnits="userSpaceOnUse"
+       y2="131.93484"
+       x2="373.61844"
+       y1="131.93484"
+       x1="373.61844"
+       id="linearGradient10307-8-6"
+       xlink:href="#GoldGrosz"
+       TheRealVince:collect="always" />
+    <linearGradient
+       gradientTransform="rotate(-135,-211.27784,58.270634)"
+       y2="170.89603"
+       x2="-334.70874"
+       y1="185.92824"
+       x1="-356.92319"
+       gradientUnits="userSpaceOnUse"
+       id="linearGradient3865-3-0"
+       xlink:href="#Pfeil"
+       TheRealVince:collect="always" />
+    <radialGradient
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(0.26458333,0,0,0.16941211,-399.01618,57.921706)"
+       r="65.52993"
+       fy="83.973633"
+       fx="1403.2871"
+       cy="83.973633"
+       cx="1403.2871"
+       id="radialGradient1137-0-4"
+       xlink:href="#GoldGrosz"
+       TheRealVince:collect="always" />
+    <linearGradient
+       gradientTransform="matrix(0.80416637,2.0770463e-8,-1.3259793e-8,0.80416636,58.11085,-15.699779)"
+       gradientUnits="userSpaceOnUse"
+       y2="120.5448"
+       x2="-106.68773"
+       y1="120.01563"
+       x1="-127.13248"
+       id="linearGradient1041-03-3-2"
+       xlink:href="#linearGradient2182"
+       TheRealVince:collect="always" />
+    <radialGradient
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(1.1482136,0.05293082,-0.06219119,1.3490965,106.22977,-74.845258)"
+       r="8.0395613"
+       fy="120.01563"
+       fx="-118.16687"
+       cy="120.01563"
+       cx="-118.16687"
+       id="radialGradient1049-69-4-2"
+       xlink:href="#GoldGrosz"
+       TheRealVince:collect="always" />
+    <radialGradient
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(2.1683329,0.09995663,-0.11744429,2.547688,157.26048,61.247333)"
+       r="8.0395613"
+       fy="120.01563"
+       fx="-118.16687"
+       cy="120.01563"
+       cx="-118.16687"
+       id="radialGradient1222"
+       xlink:href="#GoldGrosz"
+       TheRealVince:collect="always" />
+    <linearGradient
+       gradientTransform="matrix(0.86099657,0,0,0.86099657,83.126767,-25.245708)"
+       gradientUnits="userSpaceOnUse"
+       y2="143.13583"
+       x2="84.428604"
+       y1="120.29518"
+       x1="-237.46852"
+       id="linearGradient1041-7-8-8-2-2"
+       xlink:href="#linearGradient1187"
+       TheRealVince:collect="always" />
+    <radialGradient
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(9.6615758,0.02108087,-0.003155,1.4459673,1123.4437,-92.960267)"
+       r="8.0395613"
+       fy="133.5192"
+       fx="-108.14763"
+       cy="133.5192"
+       cx="-108.14763"
+       id="radialGradient1049-34-8-8-4-3"
+       xlink:href="#GoldGrosz"
+       TheRealVince:collect="always" />
+    <radialGradient
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(9.6615758,0.02108087,-0.003155,1.4459673,1364.4326,-101.95067)"
+       r="8.0395613"
+       fy="133.5192"
+       fx="-108.14763"
+       cy="133.5192"
+       cx="-108.14763"
+       id="radialGradient1303"
+       xlink:href="#GoldGrosz"
+       TheRealVince:collect="always" />
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath1440">
+      <circle
+         style="opacity:0.98999999;fill:#debd75;fill-opacity:1;stroke:#debd75;stroke-width:1.32291675;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         id="circle1442"
+         cx="-120.15634"
+         cy="-9.2067566"
+         r="43.324944" />
+    </clipPath>
+    <linearGradient
+       TheRealVince:collect="always"
+       xlink:href="#linearGradient1187"
+       id="linearGradient1450"
+       x1="-162.0807"
+       y1="-1.4059223"
+       x2="-91.574356"
+       y2="-8.8154125"
+       gradientUnits="userSpaceOnUse" />
+    <linearGradient
+       TheRealVince:collect="always"
+       xlink:href="#linearGradient2182"
+       id="linearGradient1732"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(0.80416637,2.0770463e-8,-1.3259793e-8,0.80416636,58.11085,-15.699779)"
+       x1="-127.13248"
+       y1="120.01563"
+       x2="-106.68773"
+       y2="120.5448" />
+    <radialGradient
+       TheRealVince:collect="always"
+       xlink:href="#GoldGrosz"
+       id="radialGradient1734"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(1.1482136,0.05293082,-0.06219119,1.3490965,106.22977,-74.845258)"
+       cx="-118.16687"
+       cy="120.01563"
+       fx="-118.16687"
+       fy="120.01563"
+       r="8.0395613" />
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     TheRealVince:pageopacity="0.0"
+     TheRealVince:pageshadow="2"
+     TheRealVince:zoom="0.87411026"
+     TheRealVince:cx="-54.712492"
+     TheRealVince:cy="839.23921"
+     TheRealVince:document-units="mm"
+     TheRealVince:current-layer="g1462"
+     showgrid="false"
+     TheRealVince:window-width="1920"
+     TheRealVince:window-height="1002"
+     TheRealVince:window-x="0"
+     TheRealVince:window-y="29"
+     TheRealVince:window-maximized="1"
+     showguides="true"
+     TheRealVince:guide-bbox="true">
+    <sodipodi:guide
+       position="199.90743,187.26618"
+       orientation="1,0"
+       id="guide1011" />
+    <sodipodi:guide
+       position="158.8175,175.03185"
+       orientation="1,0"
+       id="guide994" />
+    <sodipodi:guide
+       position="153.45834,269.72802"
+       orientation="1,0"
+       id="guide1119" />
+    <sodipodi:guide
+       position="63.564637,327.50923"
+       orientation="1,0"
+       id="guide1004" />
+    <sodipodi:guide
+       position="-152.28241,225.48381"
+       orientation="1,0"
+       id="guide1005" />
+    <sodipodi:guide
+       position="-85.205726,204.10863"
+       orientation="0,1"
+       id="guide1007" />
+    <sodipodi:guide
+       position="-69.780549,275.03748"
+       orientation="0,1"
+       id="guide1009" />
+    <sodipodi:guide
+       position="40.257604,313.58554"
+       orientation="1,0"
+       id="guide1148" />
+    <sodipodi:guide
+       position="86.871669,342.34098"
+       orientation="1,0"
+       id="guide1150" />
+  </sodipodi:namedview>
+  <metadata
+     id="metadata5">
+    <rdf:rdf>
+      <cc:work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title />
+      </cc:work>
+    </rdf:rdf>
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     TheRealVince:label="Layer 1"
+     TheRealVince:groupmode="layer"
+     id="layer1"
+     transform="translate(57.575866,-7.340886)">
+    <circle
+       style="opacity:0.98999999;fill:none;fill-opacity:1;stroke:url(#linearGradient1450);stroke-width:1.33217406;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="path1405"
+       cx="-135.56076"
+       cy="-7.7626095"
+       r="43.324944"
+       clip-path="url(#clipPath1440)"
+       transform="matrix(-1.0600813,-0.09031657,0.1118766,-0.8557902,-140.42262,54.55464)" />
+    <g
+       transform="translate(-12.81206,-79.160504)"
+       id="currencyBoxIn"
+       TheRealVince:label="Layer 1">
+      <rect
+         style="fill:#ffffff;fill-opacity:1;stroke:url(#radialGradient2669);stroke-width:1.05599999;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         y="99.310997"
+         x="22.80835"
+         height="38.706833"
+         width="331.06293"
+         id="txtIn" />
+      <ellipse
+         TheRealVince:label="#path10"
+         ry="19.849958"
+         rx="22.876154"
+         style="fill:url(#radialGradient2613);fill-opacity:1;stroke:url(#linearGradient2648);stroke-width:1.1380806;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         cy="118.68313"
+         cx="19.25238"
+         id="circleBackground" />
+      <text
+         TheRealVince:label="#text4547"
+         id="lblWertIn"
+         y="132.64267"
+         x="350.23846"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:31.75px;line-height:1.25;font-family:monospace;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:end;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:end;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+         xml:space="preserve"><tspan
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:29.98611069px;font-family:monospace;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:end;writing-mode:lr-tb;text-anchor:end;stroke-width:0.26458332"
+           y="132.64267"
+           x="350.23846"
+           id="tspan4545"
+           sodipodi:role="line">0</tspan></text>
+      <path
+         TheRealVince:connector-curvature="0"
+         id="btnDropdownIn"
+         transform="matrix(0.26458333,0,0,0.26458333,2.7269659,81.290435)"
+         d="M 1327.1602,68.109375 V 214.40234 h 151.4277 V 68.109375 Z"
+         style="opacity:1;fill:url(#linearGradient331);fill-opacity:1;stroke:url(#linearGradient10307);stroke-width:3.99118114;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+      <path
+         id="btnDropdownPfeilIn"
+         transform="matrix(0.26458333,0,0,0.26458333,2.3320502,98.26413)"
+         d="m 1356.1445,44.6875 -15.7148,15.714844 47.1426,47.142576 15.7148,15.71485 15.7149,-15.71485 47.1425,-47.142576 -15.7148,-15.714844 -47.1426,47.142578 z"
+         style="fill:url(#linearGradient3865);fill-opacity:1;stroke:url(#radialGradient1137);stroke-width:3.77952766;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         TheRealVince:connector-curvature="0" />
+      <text
+         id="lblCurrencySignIn"
+         y="126.52396"
+         x="18.955681"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:20.81463432px;line-height:1.25;font-family:sans-serif;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:center;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:url(#linearGradient2579-0-4);fill-opacity:1;stroke:url(#radialGradient1135);stroke-width:0.34395835;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         xml:space="preserve"><tspan
+           id="tspan111"
+           style="fill:url(#linearGradient2579-0-4);fill-opacity:1;stroke:url(#radialGradient1135);stroke-width:0.34395835;stroke-miterlimit:4;stroke-dasharray:none"
+           y="126.52396"
+           x="18.955681"
+           sodipodi:role="line">$</tspan></text>
+    </g>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:9.87233353px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#ff6600;fill-opacity:1;stroke:#4f7b91;stroke-width:0;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       x="393.25128"
+       y="241.8492"
+       id="text838-6-6-4"><tspan
+         sodipodi:role="line"
+         id="tspan836-2-3-7"
+         x="393.25128"
+         y="250.58389"
+         style="font-size:32.90777969px;fill:#ff6600;fill-opacity:1;stroke:#4f7b91;stroke-width:0;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" /></text>
+    <rect
+       style="fill:url(#radialGradient1021);fill-opacity:1;stroke:#debd75;stroke-width:2.31701303;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="btn7"
+       width="81.636696"
+       height="41.153458"
+       x="26.72097"
+       y="145.14774" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:9.87233353px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:url(#linearGradient1041);fill-opacity:1;stroke:url(#radialGradient1049);stroke-width:0.51305044;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       x="54.835159"
+       y="178.53917"
+       id="btn7Text"><tspan
+         sodipodi:role="line"
+         id="tspan836-7-1-1"
+         x="54.835159"
+         y="178.53917"
+         style="font-size:34.55316925px;fill:url(#linearGradient1041);fill-opacity:1;stroke:url(#radialGradient1049);stroke-width:0.51305044;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1">7</tspan></text>
+    <rect
+       style="fill:url(#radialGradient1021-5);fill-opacity:1;stroke:#debd75;stroke-width:2.31701303;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="btn8"
+       width="81.636696"
+       height="41.153458"
+       x="108.35767"
+       y="145.14774" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:9.87233353px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:url(#linearGradient1041-0);fill-opacity:1;stroke:url(#radialGradient1049-6);stroke-width:0.51305044;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       x="136.47195"
+       y="178.53917"
+       id="btn8Text"><tspan
+         sodipodi:role="line"
+         id="tspan836-7-1-1-2"
+         x="136.47195"
+         y="178.53917"
+         style="font-size:34.55316925px;fill:url(#linearGradient1041-0);fill-opacity:1;stroke:url(#radialGradient1049-6);stroke-width:0.51305044;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1">8</tspan></text>
+    <rect
+       style="fill:url(#radialGradient1021-8);fill-opacity:1;stroke:#debd75;stroke-width:2.31695628;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="btn9"
+       width="81.636696"
+       height="41.153458"
+       x="189.99446"
+       y="145.14774" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:9.87233353px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:url(#linearGradient1041-2);fill-opacity:1;stroke:url(#radialGradient1049-2);stroke-width:0.51305044;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       x="218.10866"
+       y="178.53917"
+       id="btn9Text"><tspan
+         sodipodi:role="line"
+         id="tspan836-7-1-1-1"
+         x="218.10866"
+         y="178.53917"
+         style="font-size:34.55316925px;fill:url(#linearGradient1041-2);fill-opacity:1;stroke:url(#radialGradient1049-2);stroke-width:0.51305044;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1">9</tspan></text>
+    <rect
+       style="fill:url(#radialGradient1021-0);fill-opacity:1;stroke:#debd75;stroke-width:2.31695628;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="btnR"
+       width="81.636696"
+       height="82.306915"
+       x="271.63098"
+       y="145.14774" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:9.87233353px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:url(#linearGradient1041-03);fill-opacity:1;stroke:url(#radialGradient1049-69);stroke-width:0.30000001;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       x="281.20248"
+       y="218.22589"
+       id="btnRText"><tspan
+         sodipodi:role="line"
+         id="tspan836-7-1-1-0"
+         x="281.20248"
+         y="218.22589"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:22.57777786px;font-family:sans-serif;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:url(#linearGradient1041-03);fill-opacity:1;stroke:url(#radialGradient1049-69);stroke-width:0.30000001;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1">Reset</tspan></text>
+    <rect
+       style="fill:url(#radialGradient1021-04);fill-opacity:1;stroke:#debd75;stroke-width:2.31701303;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="btn4"
+       width="81.636696"
+       height="41.153458"
+       x="26.72097"
+       y="186.30119" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:9.87233353px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:url(#linearGradient1041-6);fill-opacity:1;stroke:url(#radialGradient1049-9);stroke-width:0.51305044;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       x="54.835159"
+       y="219.69264"
+       id="btn4Text"><tspan
+         sodipodi:role="line"
+         id="tspan836-7-1-1-27"
+         x="54.835159"
+         y="219.69264"
+         style="font-size:34.55316925px;fill:url(#linearGradient1041-6);fill-opacity:1;stroke:url(#radialGradient1049-9);stroke-width:0.51305044;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1">4</tspan></text>
+    <rect
+       style="fill:url(#radialGradient1021-6);fill-opacity:1;stroke:#debd75;stroke-width:2.31701303;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="btn5"
+       width="81.636696"
+       height="41.153458"
+       x="108.35767"
+       y="186.30119" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:9.87233353px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:url(#linearGradient1041-21);fill-opacity:1;stroke:url(#radialGradient1049-1);stroke-width:0.51305044;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       x="136.47195"
+       y="219.69264"
+       id="btn5Text"><tspan
+         sodipodi:role="line"
+         id="tspan836-7-1-1-4"
+         x="136.47195"
+         y="219.69264"
+         style="font-size:34.55316925px;fill:url(#linearGradient1041-21);fill-opacity:1;stroke:url(#radialGradient1049-1);stroke-width:0.51305044;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1">5</tspan></text>
+    <rect
+       style="fill:url(#radialGradient1021-80);fill-opacity:1;stroke:#debd75;stroke-width:2.31701303;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="btn6"
+       width="81.636696"
+       height="41.153458"
+       x="189.99446"
+       y="186.30119" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:9.87233353px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:url(#linearGradient1041-9);fill-opacity:1;stroke:url(#radialGradient1049-4);stroke-width:0.51305044;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       x="218.10866"
+       y="219.69264"
+       id="btn6Text"><tspan
+         sodipodi:role="line"
+         id="tspan836-7-1-1-8"
+         x="218.10866"
+         y="219.69264"
+         style="font-size:34.55316925px;fill:url(#linearGradient1041-9);fill-opacity:1;stroke:url(#radialGradient1049-4);stroke-width:0.51305044;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1">6</tspan></text>
+    <rect
+       style="fill:url(#radialGradient1021-3);fill-opacity:1;stroke:#debd75;stroke-width:2.31701303;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="btn1"
+       width="81.636696"
+       height="41.153458"
+       x="26.72097"
+       y="227.45465" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:9.87233353px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:url(#linearGradient1041-4);fill-opacity:1;stroke:url(#radialGradient1049-96);stroke-width:0.51305044;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       x="54.835159"
+       y="260.84601"
+       id="btn1Text"><tspan
+         sodipodi:role="line"
+         id="tspan836-7-1-1-02"
+         x="54.835159"
+         y="260.84601"
+         style="font-size:34.55316925px;fill:url(#linearGradient1041-4);fill-opacity:1;stroke:url(#radialGradient1049-96);stroke-width:0.51305044;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1">1</tspan></text>
+    <rect
+       style="fill:url(#radialGradient1021-9);fill-opacity:1;stroke:#debd75;stroke-width:2.31701303;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="btn2"
+       width="81.636696"
+       height="41.153458"
+       x="108.35767"
+       y="227.45465" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:9.87233353px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:url(#linearGradient1041-5);fill-opacity:1;stroke:url(#radialGradient1049-3);stroke-width:0.51305044;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       x="136.47195"
+       y="260.84601"
+       id="btn2Text"><tspan
+         sodipodi:role="line"
+         id="tspan836-7-1-1-41"
+         x="136.47195"
+         y="260.84601"
+         style="font-size:34.55316925px;fill:url(#linearGradient1041-5);fill-opacity:1;stroke:url(#radialGradient1049-3);stroke-width:0.51305044;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1">2</tspan></text>
+    <rect
+       style="fill:url(#radialGradient1021-2);fill-opacity:1;stroke:#debd75;stroke-width:2.31701303;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="btn3"
+       width="81.636696"
+       height="41.153458"
+       x="189.99446"
+       y="227.45465" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:9.87233353px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:url(#linearGradient1041-92);fill-opacity:1;stroke:url(#radialGradient1049-68);stroke-width:0.51305044;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       x="218.10866"
+       y="260.84601"
+       id="btn3Text"><tspan
+         sodipodi:role="line"
+         id="tspan836-7-1-1-6"
+         x="218.10866"
+         y="260.84601"
+         style="font-size:34.55316925px;fill:url(#linearGradient1041-92);fill-opacity:1;stroke:url(#radialGradient1049-68);stroke-width:0.51305044;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1">3</tspan></text>
+    <rect
+       style="fill:url(#radialGradient1021-89);fill-opacity:1;stroke:#debd75;stroke-width:2.31701303;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="btn0"
+       width="81.636696"
+       height="41.153458"
+       x="26.72097"
+       y="268.60803" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:9.87233353px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:url(#linearGradient1041-8);fill-opacity:1;stroke:url(#radialGradient1049-33);stroke-width:0.51305044;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       x="54.835159"
+       y="301.99945"
+       id="btn0Text"><tspan
+         sodipodi:role="line"
+         id="tspan836-7-1-1-87"
+         x="54.835159"
+         y="301.99945"
+         style="font-size:34.55316925px;fill:url(#linearGradient1041-8);fill-opacity:1;stroke:url(#radialGradient1049-33);stroke-width:0.51305044;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1">0</tspan></text>
+    <rect
+       style="fill:url(#radialGradient1021-96);fill-opacity:1;stroke:#debd75;stroke-width:2.31701303;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="btn00"
+       width="81.636696"
+       height="41.153458"
+       x="108.35767"
+       y="268.60803" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:9.87233353px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:url(#linearGradient1041-1);fill-opacity:1;stroke:url(#radialGradient1049-7);stroke-width:0.51305044;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       x="126.59962"
+       y="301.99945"
+       id="btn00Text"><tspan
+         sodipodi:role="line"
+         id="tspan836-7-1-1-28"
+         x="126.59962"
+         y="301.99945"
+         style="font-size:34.55316925px;fill:url(#linearGradient1041-1);fill-opacity:1;stroke:url(#radialGradient1049-7);stroke-width:0.51305044;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1">00</tspan></text>
+    <rect
+       style="fill:url(#radialGradient1021-30);fill-opacity:1;stroke:#debd75;stroke-width:2.31701303;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="btn000"
+       width="81.636696"
+       height="41.153458"
+       x="189.99446"
+       y="268.60803" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:9.87233353px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:url(#linearGradient1041-89);fill-opacity:1;stroke:url(#radialGradient1049-92);stroke-width:0.51305044;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       x="196.3895"
+       y="301.99945"
+       id="btn000Text"><tspan
+         sodipodi:role="line"
+         id="tspan836-7-1-1-08"
+         x="196.3895"
+         y="301.99945"
+         style="font-size:34.55316925px;fill:url(#linearGradient1041-89);fill-opacity:1;stroke:url(#radialGradient1049-92);stroke-width:0.51305044;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1">000</tspan></text>
+    <rect
+       style="fill:url(#radialGradient1021-1);fill-opacity:1;stroke:#debd75;stroke-width:2.31701303;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="btnDel"
+       width="81.636696"
+       height="41.153458"
+       x="271.63098"
+       y="227.45465" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:9.87233353px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:url(#linearGradient1041-7);fill-opacity:1;stroke:url(#radialGradient1049-34);stroke-width:0.40000001;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       x="292.58984"
+       y="258.44846"
+       id="btnDelText"><tspan
+         sodipodi:role="line"
+         id="tspan836-7-1-1-7"
+         x="292.58984"
+         y="258.44846"
+         style="font-size:27.97161102px;fill:url(#linearGradient1041-7);fill-opacity:1;stroke:url(#radialGradient1049-34);stroke-width:0.40000001;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1">⟵</tspan></text>
+    <rect
+       style="fill:url(#radialGradient1021-1-3);fill-opacity:1;stroke:#debd75;stroke-width:2.31701303;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="btnPunkt"
+       width="81.636696"
+       height="41.153458"
+       x="271.63098"
+       y="268.60803" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:9.87233353px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:url(#linearGradient1041-7-9);fill-opacity:1;stroke:url(#linearGradient2158);stroke-width:0.51305044;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       x="306.6557"
+       y="292.12701"
+       id="btnPunktText"><tspan
+         sodipodi:role="line"
+         id="tspan836-7-1-1-7-4"
+         x="306.6557"
+         y="292.12701"
+         style="font-size:34.55316925px;fill:url(#linearGradient1041-7-9);fill-opacity:1;stroke:url(#linearGradient2158);stroke-width:0.51305044;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1">.</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:9.11221409px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:url(#linearGradient1041-7-8);fill-opacity:1;stroke:url(#radialGradient1049-34-8);stroke-width:0.4736042;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       x="175.42303"
+       y="84.174004"
+       id="lblInOutArrow"
+       TheRealVince:label="#btnDelText-3"><tspan
+         sodipodi:role="line"
+         id="tspan836-7-1-1-7-3"
+         x="175.42303"
+         y="84.174004"
+         style="font-size:25.81793976px;fill:url(#linearGradient1041-7-8);fill-opacity:1;stroke:url(#radialGradient1049-34-8);stroke-width:0.4736042;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1">⥤ </tspan></text>
+    <g
+       id="currencyBoxOut"
+       TheRealVince:label="#g2165">
+      <rect
+         style="fill:#c5c5c5;fill-opacity:1;stroke:url(#radialGradient2669-6);stroke-width:1.05595207;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         y="92.194695"
+         x="9.9962988"
+         height="38.706833"
+         width="331.06293"
+         id="txtOut" />
+      <ellipse
+         TheRealVince:label="#path10"
+         ry="19.850071"
+         rx="22.867085"
+         style="fill:url(#radialGradient2613-7);fill-opacity:1;stroke:url(#linearGradient2648-7);stroke-width:1.13785815;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         cy="111.88197"
+         cx="5.8014932"
+         id="circleBackground-0" />
+      <text
+         TheRealVince:label="#text4547"
+         id="lblWertOut"
+         y="125.52636"
+         x="337.42633"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:31.75px;line-height:1.25;font-family:monospace;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:end;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:end;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+         xml:space="preserve"><tspan
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:29.98611069px;font-family:monospace;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:end;writing-mode:lr-tb;text-anchor:end;stroke-width:0.26458332"
+           y="125.52636"
+           x="337.42633"
+           id="tspan4545-9"
+           sodipodi:role="line">0.00</tspan></text>
+      <path
+         TheRealVince:connector-curvature="0"
+         id="btnDropdownOut"
+         d="m 341.05934,92.194735 v 38.706675 h 40.06524 V 92.194735 Z"
+         style="opacity:1;fill:url(#linearGradient331-9);fill-opacity:1;stroke:url(#linearGradient10307-8);stroke-width:1.05599999;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+      <path
+         id="btnDropdownPfeilOut"
+         d="m 348.33318,102.97139 -4.15787,4.15789 12.47315,12.47314 4.15787,4.15788 4.1579,-4.15788 12.47312,-12.47314 -4.15787,-4.15789 -12.47315,12.47314 z"
+         style="fill:url(#linearGradient3865-3);fill-opacity:1;stroke:url(#radialGradient1137-0);stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         TheRealVince:connector-curvature="0" />
+      <text
+         id="lblCurrencySignOut"
+         y="119.93682"
+         x="6.1436329"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:20.81463432px;line-height:1.25;font-family:sans-serif;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:center;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:url(#linearGradient935);fill-opacity:1;stroke:url(#radialGradient1135-3);stroke-width:0.34395835;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         xml:space="preserve"><tspan
+           id="tspan111-2"
+           style="fill:url(#linearGradient935);fill-opacity:1;stroke:url(#radialGradient1135-3);stroke-width:0.34395835;stroke-miterlimit:4;stroke-dasharray:none"
+           y="119.93682"
+           x="6.1436329"
+           sodipodi:role="line">€</tspan></text>
+      <text
+         TheRealVince:label="#text991-6"
+         id="lblCurrencyLongOut"
+         y="118.67017"
+         x="36.26495"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:19.75555611px;line-height:1.25;font-family:sans-serif;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:0;stroke:none;stroke-width:0.26458332"
+         xml:space="preserve"><tspan
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:19.75555611px;font-family:sans-serif;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:0;stroke-width:0.26458332"
+           y="118.67017"
+           x="36.26495"
+           id="tspan989-4"
+           sodipodi:role="line">Euro</tspan></text>
+    </g>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:19.75555611px;line-height:1.25;font-family:sans-serif;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:0;stroke:none;stroke-width:0.26458332"
+       x="36.413834"
+       y="48.232155"
+       id="lblCurrencyLongIn"
+       TheRealVince:label="#text991-6-5"><tspan
+         sodipodi:role="line"
+         id="tspan989-4-2"
+         x="36.413834"
+         y="48.232155"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:19.75555611px;font-family:sans-serif;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:0;stroke-width:0.26458332">U.S. Dollar</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:16.07206345px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:url(#linearGradient1041-03-3);fill-opacity:1;stroke:url(#radialGradient1049-69-4);stroke-width:0.97679418;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       x="-133.09581"
+       y="365.23462"
+       id="btnRPfeil"
+       transform="rotate(-78.196598)"
+       TheRealVince:label="#btnRText-9"><tspan
+         sodipodi:role="line"
+         id="tspan836-7-1-1-0-7"
+         x="-133.09581"
+         y="365.23462"
+         style="font-size:56.25222397px;fill:url(#linearGradient1041-03-3);fill-opacity:1;stroke:url(#radialGradient1049-69-4);stroke-width:0.97679418;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1">↺</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12.41248703px;line-height:1.25;font-family:sans-serif;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:end;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:end;fill:url(#linearGradient1041-7-8-8);fill-opacity:1;stroke:url(#radialGradient1049-34-8-8);stroke-width:0.26458335;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       x="171.25453"
+       y="80.217766"
+       id="lblIn"
+       TheRealVince:label="#btnDelText-3-3"><tspan
+         sodipodi:role="line"
+         id="tspan836-7-1-1-7-3-3"
+         x="171.25453"
+         y="80.217766"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12.41248703px;font-family:sans-serif;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:end;writing-mode:lr-tb;text-anchor:end;fill:url(#linearGradient1041-7-8-8);fill-opacity:1;stroke:url(#radialGradient1049-34-8-8);stroke-width:0.26458335;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1">© The Real</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12.41248703px;line-height:1.25;font-family:sans-serif;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:url(#linearGradient1041-7-8-8-2);fill-opacity:1;stroke:url(#radialGradient1049-34-8-8-4);stroke-width:0.26458335;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       x="201.36656"
+       y="80.192764"
+       id="lblOut"
+       TheRealVince:label="#btnDelText-3-3"><tspan
+         sodipodi:role="line"
+         id="tspan836-7-1-1-7-3-3-9"
+         x="201.36656"
+         y="80.192764"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12.41248703px;font-family:sans-serif;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:url(#linearGradient1041-7-8-8-2);fill-opacity:1;stroke:url(#radialGradient1049-34-8-8-4);stroke-width:0.26458335;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1">Vince</tspan></text>
+    <g
+       id="g1462"
+       transform="translate(-5.291667,-0.52916668)">
+      <path
+         TheRealVince:label="#btnDropdownOut-3"
+         sodipodi:nodetypes="ccccc"
+         TheRealVince:connector-curvature="0"
+         id="btnTauschen"
+         d="m -51.322595,55.950569 v 38.70667 h 40.065241 v -38.70667 z"
+         style="opacity:1;fill:url(#linearGradient331-9-9);fill-opacity:1;stroke:url(#linearGradient10307-8-6);stroke-width:1.05599999;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+      <g
+         aria-label="⮂"
+         transform="matrix(1.2954011,0.00473741,0.07914556,1.1517776,6.8287704,-17.712372)"
+         style="font-style:normal;font-weight:normal;font-size:8.51076031px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:url(#linearGradient1041-03-3-2);fill-opacity:1;stroke:url(#radialGradient1049-69-4-2);stroke-width:0.51724923;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         id="btnTauschenPfeil">
+        <path
+           d="M -31.609871,80.261849 V 78.117137 H -45.13347 V 75.01922 h 13.523599 v -2.144712 l 5.897958,3.693671 z m -7.625642,8.727786 -5.897957,-3.693671 5.897957,-3.69367 v 2.144712 h 13.5236 v 3.097917 h -13.5236 z"
+           style="font-size:29.78766441px;fill:url(#linearGradient1732);fill-opacity:1;stroke:url(#radialGradient1734);stroke-width:0.51724923;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+           id="path1729"
+           TheRealVince:connector-curvature="0" />
+      </g>
+    </g>
+  </g>
+</svg>
+            </div>
+          </div>
+        </div>
+        <script>
+            // Klassen- & Funktionsaufrufe
+            Initialize();
+            InitializeCurrencyCombobox();
+        </script>
+    </body>
+</html>
+

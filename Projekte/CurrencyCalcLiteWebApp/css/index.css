@@ -1,0 +1,161 @@
+:root {
+  --contentHoehe: 100%;
+
+  --comboboxMaxFlagImgSize: 20px;
+
+  --textboxImgInTop: 0px;
+  --textboxImgInLeft: 0px;
+  --textboxImgInSize: 32px;
+  --textboxImgOutTop: 0px;
+  --textboxImgOutLeft: 0px;
+  --textboxImgOutSize: 32px;
+
+  /* Hintergrund */
+  --musterFarbe: #EFD28610;
+  --musterHintergrund: #040305;
+  --musterQuadratGroesze: 10px;
+}
+
+html, body {
+  top: 0px;
+  left: 0px;
+  margin: 0px;
+  padding: 0px;
+  width: 100%;
+  height: 100%;
+
+  position: relative;
+  font-family: sans;
+  user-select: none;
+
+   /* Muster */
+    background-color: var(--musterHintergrund);
+    background-position: -2px -2px, -2px -2px, -1px -1px, -1px -1px;
+    background-size: var(--musterQuadratGroesze)  var(--musterQuadratGroesze) , var(--musterQuadratGroesze)  8px;
+
+    background-image:
+      linear-gradient(var(--musterFarbe) 1px, transparent 1px),
+      linear-gradient(90deg, var(--musterFarbe) 1px, transparent 1px);
+
+}
+
+#Gesamt {
+  position:absolute;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+#Unten {
+  position: absolute; /* sollte designtechnisch unabhaengig sein also */
+  top: var(--contentHoehe);
+  height: var(--footerHoehe);
+  width: 100%;
+
+  background: #0000DD;
+}
+
+#Mitte {
+  position: absolute;
+  width: 100%;
+  height: var(--contentHoehe);
+ /* background: #040404; */
+}
+
+#Mitte svg{
+  position: absolute;
+  width: 98%;
+  height: calc(98% - var(--headerFooterHoeheGesamt));
+  height: var(--contentHoehe);
+  height: 98%;
+  left: 1%;
+  top: 1%;
+  display: block;
+}
+
+.textboxImg {
+  display: block;
+  max-width: var(--comboboxMaxFlagImgSize);
+}
+
+#textboxImgIn {
+  position: fixed;
+  top: var(--textboxImgInTop);
+  left: var(--textboxImgInLeft);
+  max-height: var(--textboxImgInSize);
+
+  z-index: 1; /* wird sonst von SVG ueberdeckt */
+  border: 1px solid #00000028;
+ /* height: var(--textboxImgInSize); */
+ /* opacity: 0.1; */
+}
+
+#textboxImgOut {
+  position: fixed;
+  top: var(--textboxImgOutTop);
+  left: var(--textboxImgOutLeft);
+  max-height: var(--textboxImgOutSize);
+
+  z-index: 1; /* wird sonst von SVG ueberdeckt */
+  border: 1px solid #00000010;
+  /*  height: var(--textboxImgOutSize);  */
+  /* opacity: 0.1; */
+}
+
+
+svg:hover {
+  cursor: default;
+}
+
+.KlickEffekt {                                    
+   animation: btnKlickAnimation 0.3s;   
+                                        
+}                                       
+                                        
+                                        
+@keyframes btnKlickAnimation {          
+                                        
+  /* from { fill: #DDAA00; }         */
+  from { fill: white; }         
+                                        
+}                                       
+
+
+/*           Klassen           */
+/* *************************** */
+
+
+/*   Animationen / Keyframes   */
+/* *************************** */
+
+#BG {
+  position: fixed;
+
+  width: calc(150% + 1024px);
+  height: calc(150% + 1024px);
+  overflow: hidden;
+
+   /* Muster */
+    background-color: var(--musterHintergrund);
+    background-position: -2px -2px, -2px -2px, -1px -1px, -1px -1px;
+    background-size: var(--musterQuadratGroesze)  var(--musterQuadratGroesze) , var(--musterQuadratGroesze)  8px;
+
+    background-image:
+      linear-gradient(var(--musterFarbe) 1px, transparent 1px),
+      linear-gradient(90deg, var(--musterFarbe) 1px, transparent 1px);
+}
+
+.NachObenLinks {
+
+  animation: AnimationNachObenLinks 1.5s linear infinite;
+  animation-fill-mode: forwards; 
+
+}
+
+@keyframes AnimationNachObenLinks {
+   from { transform:translate(0px); }
+   /* to { transform:translate(-256px, -256px);  } */
+   to { transform:translate(-20px, -20px);  }
+}
+
+
